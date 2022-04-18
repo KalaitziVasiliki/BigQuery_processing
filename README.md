@@ -32,8 +32,5 @@ __________________________________________
 _________________________________________
 Code Execution
 
-In order to run the code, please follow one of the alternatives given below:
-
-> Run manually the commands included in main.sh shell script.
-> OR
-> Submit main.sh shell script in your cmd.
+In order to run the code, please run the following commands:
+python [filename].py -opt1 [date_arghment_in YYYYMMDD_format]
