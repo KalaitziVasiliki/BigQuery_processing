@@ -35,4 +35,5 @@ Code Execution
 In order to run the code, please follow one of the alternatives given below:
 
 > Run manually the commands included in main.sh shell script.
+> OR
 > Submit main.sh shell script in your cmd.
