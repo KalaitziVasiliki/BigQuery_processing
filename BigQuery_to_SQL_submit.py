@@ -87,8 +87,6 @@ if __name__ == '__main__':
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH --
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
     
 #Return the conversion rate (CR) for an action.
 #total_conversions (int): Total number of conversions.
