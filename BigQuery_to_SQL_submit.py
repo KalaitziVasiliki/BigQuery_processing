@@ -87,7 +87,7 @@ if __name__ == '__main__':
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH --
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-'''
+
 
     
 #Return the conversion rate (CR) for an action.
@@ -98,3 +98,5 @@ ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH --
 #total_actions = df.groupby('date').visitNumber.sum()
 #print(total_actions)
 #conv_rate= (total_conversions / total_actions) * 100
+
+'''
