@@ -33,4 +33,4 @@ _________________________________________
 Code Execution
 
 In order to run the code, please run the following commands:
-python [filename].py -opt1 [date_arghment_in YYYYMMDD_format]
+>> python [filename].py -opt1 [date_arghment_in YYYYMMDD_format]
