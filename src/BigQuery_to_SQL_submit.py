@@ -40,9 +40,9 @@ def big_query_to_df(opt1_value):
 	
 def df_to_csv(df):
 		print('Starting dataset export')
-		df.to_csv('C:/Users/kalai/Downloads/efood/extracted_data_ex2.csv', index=False,header=True)
+		#df.to_csv('path/extracted_data_ex2.csv', index=False,header=True)
+		df.to_csv('https://github.com/KalaitziVasiliki/BigQuery_processing/blob/main/datasets/extracted_data_ex2.csv', index=False,header=True)
 		print('csv file generated')	
-	
 
 	
 def arguments_validation(opt1_value):
