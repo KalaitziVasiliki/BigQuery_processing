@@ -61,19 +61,14 @@ def conversion_rate_calc(df):
 
 	
 if __name__ == '__main__':
-	'''
-		#If needed for command line args from argparse import ArgumentParser
-		#Get arguments
-		parser = ArgumentParser()
-		parser.add_argument('--arg',help='This is an arg')
-	'''
 	start = time.time()
 	parser = argparse.ArgumentParser()
 	parser.add_argument("--opt1", type=str)	
 	args = parser.parse_args()
 	opt1_value=arguments_validation(args.opt1)
 
-	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "BigQuery_processing/blob/main/tensile-topic-298811-7062d73da8fd.json"
+	#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] can be downoaded and used for running the project, please configure the path used from your side 
+	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "BigQuery_processing/blob/main/tensile-topic-298811-7062d73da8fd.json" 
 	
 	#big_query_to_csv(opt1_value) #df = pd.DataFrame()
 	df= big_query_to_df(opt1_value)
