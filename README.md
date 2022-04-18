@@ -9,7 +9,6 @@ to a New or Returning user) and Platform (whether the session occurred into desk
 or Mobile)
 ➔ The list of all users with the timestamp of their first session and their time to convert
 
------------------------------------------------
 
 1. A Python program that will receive an input date as argument, will utilize Python Big Query API
 to download session rows for this specific date and calculate conversion rate using only Python.
