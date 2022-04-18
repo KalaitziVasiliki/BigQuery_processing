@@ -6,7 +6,7 @@ As a Product owner I’d like a list of all users with the timestamp of their fi
 
 RUN USING THE FOLLOWING COMMAND:
 
-python read_from_BigQuery.py --opt1 [date_arghment_in YYYYMMDD_format]
+python BigQuery_to_SQL_submit.py --opt1 [date_arghment_in YYYYMMDD_format]
 
 '''
 
