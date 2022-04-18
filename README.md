@@ -1,8 +1,6 @@
 # BigQuery_processing
 
-Goal
-
-We need to report the following metrics of the data in the Big Query tables:
+Calculations
 
 ➔ The ecommerce Conversion rate for the day X. Two dimensions : UserType (whether the session refers
 to a New or Returning user) and Platform (whether the session occurred into desktop; ie Web
