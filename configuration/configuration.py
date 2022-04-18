@@ -1,8 +1,4 @@
 #----------------------
-
-query_suffix='''`;'''
-
-#----------------------
 #read_from_BigQuery configurations
 
 query1= '''SELECT * FROM `bigquery-public-data.google_analytics_sample.ga_sessions_'''
@@ -15,7 +11,6 @@ query2= """SELECT fullVisitorId AS Customer_Id, visitStartTime AS First_Session_
 query_suffix2="""` ) WHERE	rn=1;"""
 
 export_path='/BigQuery_processing/datasets/extracted_data.csv'
-
 
 #----------------------
 #General configurations
