@@ -27,3 +27,12 @@ information:
 about organic traffic, paid search traffic, display traffic, etc.
 ➔ Content data: information about the behavior of users on the site.
 ➔ Transactional data: information about the transactions that occur on the website.
+
+__________________________________________
+_________________________________________
+Code Execution
+
+In order to run the code, please follow one of the alternatives given below:
+
+Run manually the commands included in main.sh shell script.
+Submit main.sh shell script in your cmd.
