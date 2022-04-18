@@ -1,17 +1,15 @@
 # BigQuery_processing
 
 Goal
-We need to report the following metrics of the data in the Big Query tables. The User Stories in the
-background are the following (in titles) :
+We need to report the following metrics of the data in the Big Query tables:
 
-➔ As a Product owner I need to know the ecommerce Conversion rate for the day X. I’d like to be
-able to breakdown the above over up to two dimensions : UserType (whether the session refers
+➔ The ecommerce Conversion rate for the day X. Two dimensions : UserType (whether the session refers
 to a New or Returning user) and Platform (whether the session occurred into desktop; ie Web
 or Mobile)
-➔ As a Product owner I’d like a list of all users with the timestamp of their first session and their
-time to convert
-Deliverables
-You are expected to create
+➔ The list of all users with the timestamp of their first session and their time to convert
+
+-----------------------------------------------
+
 1. A Python program that will receive an input date as argument, will utilize Python Big Query API
 to download session rows for this specific date and calculate conversion rate using only Python.
 2. A Python program that will utilize the Python Big Query API to submit a SQL query needed to
