@@ -4,7 +4,8 @@ Calculations
 
 ➔ The ecommerce Conversion rate for the day X. Two dimensions : UserType (whether the session refers
 to a New or Returning user) and Platform (whether the session occurred into desktop; ie Web
-or Mobile)
+or Mobile).
+
 ➔ The list of all users with the timestamp of their first session and their time to convert
 
 
