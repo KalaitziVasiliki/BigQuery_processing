@@ -58,7 +58,7 @@ def conversion_rate_calc(df):
 	print('Number of returning users: ',returning_users)
 	
 	
-	#Platform (whether the session occurred into desktop; ie Web or Mobile)'''
+	#Platform (whether the session occurred into desktop; ie Web or Mobile)
 	ds = pd.json_normalize(df['device'])
 	count_desktop_sessions=ds['browser'][ds.deviceCategory == 'desktop'].count()
 	count_mobile_sessions=ds['browser'][ds.deviceCategory == 'mobile'].count()
