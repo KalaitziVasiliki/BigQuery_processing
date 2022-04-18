@@ -3,12 +3,12 @@ As a Product owner I’d like a list of all users with the timestamp of their fi
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 2. A Python program that will utilize the Python Big Query API to submit a SQL query needed to download needed information for the second story.
 
-
 RUN USING THE FOLLOWING COMMAND:
-
 python BigQuery_to_SQL_submit.py --opt1 [date_arghment_in YYYYMMDD_format]
-
 '''
+#--------------------------------------------------------------------------------------------#
+# Assumption: Time to convert can be calculated as the sum of all timeOnSite values per user #
+#--------------------------------------------------------------------------------------------#
 
 from google.cloud import bigquery
 import os
@@ -33,9 +33,7 @@ def big_query_to_df(opt1_value):
 	#query = """SELECT fullVisitorId AS Customer_Id, visitStartTime AS First_Session_Timestamp,	Total_Conv_Time	FROM (	SELECT fullVisitorId,visitStartTime,SUM(totals.timeOnSite) OVER (PARTITION BY fullVisitorId) AS Total_Conv_Time,ROW_NUMBER() OVER (PARTITION BY fullVisitorId ORDER BY visitStartTime ASC) rn FROM 	`bigquery-public-data.google_analytics_sample.ga_sessions_"""+ opt1_value +"""` ) WHERE	rn=1;"""
 	print('Starting API dataset loading in a dataframe')		
 	df = client.query(query).to_dataframe()
-	return df
-	
-	
+	return df	
 	
 def df_to_csv(df):
 		print('Starting dataset export')
