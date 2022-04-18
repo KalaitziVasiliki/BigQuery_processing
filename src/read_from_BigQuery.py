@@ -64,10 +64,8 @@ def conversion_rate_calc(df):
 	count_mobile_sessions=ds['browser'][ds.deviceCategory == 'mobile'].count()
 	print ('Number of desktop sessions: ', count_desktop_sessions)
 	print ('Number of mobile sessions: ', count_mobile_sessions)
-
 	print ('----------------------------------------------------')
-
-
+	
 	
 if __name__ == '__main__':
 	start = time.time()
