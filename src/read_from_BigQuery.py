@@ -9,7 +9,6 @@ to download session rows for this specific date and calculate conversion rate us
 
 RUN USING THE FOLLOWING COMMAND:
 python read_from_BigQuery.py --opt1 [date_arghment_in YYYYMMDD_format]
-
 '''
 
 from google.cloud import bigquery
