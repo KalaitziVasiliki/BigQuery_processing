@@ -70,7 +70,8 @@ if __name__ == '__main__':
 	opt1_value=arguments_validation(args.opt1)
 
 	#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] can be downoaded and used for running the project, please configure the path used from your side 
-	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "BigQuery_processing/blob/main/tensile-topic-298811-7062d73da8fd.json" 
+	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "https://github.com/KalaitziVasiliki/BigQuery_processing/blob/main/configuration/tensile-topic-298811-7062d73da8fd.json" 
+	
 	#big_query_to_csv(opt1_value) #df = pd.DataFrame()
 	df= big_query_to_df(opt1_value)
 	print (df)
@@ -82,8 +83,7 @@ if __name__ == '__main__':
 	sys.exit(0)
 
 	
-	
-	
+
 '''
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH --
