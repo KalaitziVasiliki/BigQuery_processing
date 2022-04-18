@@ -74,6 +74,7 @@ if __name__ == '__main__':
 	opt1_value=arguments_validation(args.opt1)
 
 	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/kalai/Downloads/efood/tensile-topic-298811-7062d73da8fd.json"
+	
 	#big_query_to_csv(opt1_value) #df = pd.DataFrame()
 	df= big_query_to_df(opt1_value)
 	conversion_rate_calc(df)
@@ -82,43 +83,3 @@ if __name__ == '__main__':
 	print('\nProcess ended and lasted ', (scriptDuration), 'seconds')
 	
 	sys.exit(0)
-
-	
-	
-	
-	
-'''
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH -- ADDITIONAL CODING TRASH --
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-'''
-
-#def big_query_to_csv(opt1_value):
-#		client = bigquery.Client() 
-#		query = '''SELECT * FROM `bigquery-public-data.google_analytics_sample.ga_sessions_''' + opt1_value +'''`;'''
-#		df = client.query(query).to_dataframe()
-#		print('Starting API export')		
-#		df.to_csv('C:/Users/kalai/Downloads/efood/extracted_data.csv', index=False,header=True)
-#		print('csv file generated')	
-
-    
-#Return the conversion rate (CR) for an action.
-#total_conversions (int): Total number of conversions.
-#total_actions (int): Total number of actions.
-#total_conversions = df.groupby('date').fullVisitorId.nunique()
-#print(total_conversions)
-#total_actions = df.groupby('date').visitNumber.sum()
-#print(total_actions)
-#conv_rate= (total_conversions / total_actions) * 100
-
-'''Calculate the number of unique user_ids in marketing DataFrame.
-Calculate the number of people who subscribed using the converted column.
-Calculate the conversion rate.'''
-
-'''Conversion rate: Definition
-The average number of conversions per ad interaction, shown as a percentage.
-Conversion rates are calculated by simply taking the number of conversions and dividing that by the number of total ad interactions that can be tracked to a conversion during the same time period. For example, if you had 50 conversions from 1,000 interactions, your conversion rate would be 5%, since 50 ÷ 1,000 = 5%.
-If you're tracking more than one conversion action, or you choose to count "Every" conversion, your conversion rate might be over 100% because more than one conversion can be counted for each interaction.
-Use conversion tracking in your account to measure your conversion rates and ultimately use them to help guide your advertising decisions.
-'''
-	
