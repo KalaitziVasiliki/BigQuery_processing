@@ -3,9 +3,13 @@ As a Product owner I need to know the ecommerce Conversion rate for the day X. I
 able to breakdown the above over up to two dimensions : UserType (whether the session refers
 to a New or Returning user) and Platform (whether the session occurred into desktop; ie Web or Mobile)
 ------------------------------------------------------------------------------------------------------
-
 1. A Python program that will receive an input date as argument, will utilize Python Big Query API
 to download session rows for this specific date and calculate conversion rate using only Python.
+
+
+RUN USING THE FOLLOWING COMMAND:
+python read_from_BigQuery.py --opt1 [date_arghment_in YYYYMMDD_format]
+
 '''
 
 from google.cloud import bigquery
@@ -19,10 +23,16 @@ import logging
 from pandas.io.json import json_normalize
 import pandas as pd
 
+#----------------------
+#Read configuration file -- Please set the path you are using
+sys.path.insert(1, '/BigQuery_processing/configuration/')
+import configuration as conf
+#----------------------
 		
 def big_query_to_df(opt1_value):
-	client = bigquery.Client() 
-	query = '''SELECT * FROM `bigquery-public-data.google_analytics_sample.ga_sessions_''' + opt1_value +'''`;'''
+	client = bigquery.Client()
+	query = conf.query1+ opt1_value + conf.query_suffix1
+	#query = '''SELECT * FROM `bigquery-public-data.google_analytics_sample.ga_sessions_''' + opt1_value +'''`;'''
 	print('Starting API dataset loading in a dataframe')		
 	df = client.query(query).to_dataframe()
 	return df
@@ -68,9 +78,8 @@ if __name__ == '__main__':
 	opt1_value=arguments_validation(args.opt1)
 
 	#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] can be downoaded and used for running the project, please configure the path used from your side 
-	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "https://github.com/KalaitziVasiliki/BigQuery_processing/blob/main/configuration/tensile-topic-298811-7062d73da8fd.json" 
+	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = conf.os_environ
 
-	
 	#big_query_to_csv(opt1_value) #df = pd.DataFrame()
 	df= big_query_to_df(opt1_value)
 	conversion_rate_calc(df)
